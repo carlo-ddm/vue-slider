@@ -34,11 +34,7 @@ const app = new Vue({
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
         ],
-
-
         flag: false,
-
-
         counterObject: 0,
     },
     
@@ -62,17 +58,20 @@ const app = new Vue({
 
         changeImg(index){
             this.counterObject = index;
-        }
+        },
 
         /*
         al click dell'immagine parte questa funzione che fa si che il counter sia uguale all'indice (INDICE PRESO DA V-FOR) che ho passato alla medesima... In questo modo il counter (utilizzato in item) assume il valore dell'indice che ho cliccato...
         */
 
-
+    },
+    mounted() {
         
-
-
-
+        setInterval( () => {
+            console.log('setInterval --> ',this);
+            this.nextObject();
+        }, 3000)
+    
     },
 })
 
