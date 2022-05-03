@@ -36,6 +36,8 @@ const app = new Vue({
         ],
 
 
+        flag: false,
+
 
         counterObject: 0,
     },
@@ -57,6 +59,16 @@ const app = new Vue({
             }
             console.log('Controllo PREV --> ',this.counterObject);
         },
+
+        changeImg(index){
+            this.counterObject = index;
+        }
+
+        /*
+        al click dell'immagine parte questa funzione che fa si che il counter sia uguale all'indice (INDICE PRESO DA V-FOR) che ho passato alla medesima... In questo modo il counter (utilizzato in item) assume il valore dell'indice che ho cliccato...
+        */
+
+
         
 
 
