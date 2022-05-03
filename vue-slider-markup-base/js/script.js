@@ -1,9 +1,12 @@
 // 1) Ciclare gli oggetti dell'array slide
 // 2) Ciclare le proprietà del singolo oggetto
 
+// 3) cicla le immagini laterali
+
 const app = new Vue({
     el: '#app',
     data: {            //data è oggetto che ha propr che è array di ogg
+
         slides : [
             {
                 image: 'img/01.jpg',
@@ -32,8 +35,11 @@ const app = new Vue({
             }
         ],
 
+
+
         counterObject: 0,
     },
+    
 
     methods: {
         nextObject(){
@@ -51,9 +57,10 @@ const app = new Vue({
             }
             console.log('Controllo PREV --> ',this.counterObject);
         },
+        
+
+
+
     },
 })
 
-
-
-// console.log(slides);
